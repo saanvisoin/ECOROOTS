@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Roots - Green Points & Rewards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2909/2909592.png" alt="Leaf logo" />
+      <div class="logo-text">Eco Roots</div>
+    </div>
+    <nav>
+      <a href="#dashboard-section">Dashboard</a>
+      <a href="#leaderboard-section">Leaderboard</a>
+      <a href="#rewards-section">Rewards</a>
+      <a href="shopping.html">Shop</a>
+      <a href="login.html"><i class="fa-solid fa-user"></i></a>
+
+    </nav>
+    <div class="points">1,250 points</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="plant-btn">🌱 Plant More, Earn More</div>
+      <h1>Turn Green Actions <br /><span>into Gold Rewards</span></h1>
+      <p>
+        Join thousands of eco warriors earning points for sustainable actions.
+        Plant trees, earn rewards, and help build a greener future together.
+      </p>
+      <div class="cta-buttons">
+        <button class="start-btn"><a href="login.html">Start Planting Today →</a></button>
+        <button class="learn-btn"><a href="#how-it-works">Learn More</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Impact -->
+  <section class="impact-section">
+    <h2>Community Impact</h2>
+    <p>Together, we're making a real difference</p>
+    <div class="impact-cards">
+      <div class="card">
+        <div class="card-icon">🌳</div>
+        <h3>12,847</h3>
+        <p>Trees Planted</p>
+        <small>+23% this month</small>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧑‍🤝‍🧑</div>
+        <h3>3,542</h3>
+        <p>Eco Warriors</p>
+        <small>+18% this month</small>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>89</h3>
+        <p>Cities Covered</p>
+        <small>+5 new cities</small>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>₹2.4L</h3>
+        <p>Rewards Distributed</p>
+        <small>+32% this month</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section -->
+<section id="dashboard-section" class="dashboard-section">
+  <h2>Your Eco Dashboard</h2>
+  <p>Track your progress and grow your green impact</p>
+
+  <div class="dashboard-container">
+    <!-- Points Card -->
+    <div class="eco-points">
+      <h3>Your Eco Points</h3>
+      <div class="points-main">🌿 <span>1,250</span></div>
+      <div class="sub-points">
+        <div>~1,750<br /><small>Total Earned</small></div>
+        <div>1,500<br /><small>Next Reward</small></div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 83%"></div>
+      </div>
+      <p class="progress-label">Progress to next reward</p>
+    </div>
+
+    <!-- Plant Form -->
+    <div class="plant-form">
+      <h3>Plant a Tree</h3>
+      <p class="points-badge">🌱 +10 Points</p>
+      <form id="plantForm">
+        <div class="form-row">
+          <input type="text" placeholder="📍 Enter planting location" />
+          <input type="text" placeholder="e.g., Oak, Pine, Mango" />
+        </div>
+        <textarea
+          placeholder="Tell us about your planting experience... (optional)"
+        ></textarea>
+
+        <div class="upload-box">
+          <p>📷 Drop your photo here or click to browse</p>
+          <input type="file" id="fileUpload" />
+          <button type="button">Choose File</button>
+        </div>
+
+        <!-- Image Preview Area -->
+        <div id="preview"></div>
+
+        <button class="submit-btn" type="submit">Submit Tree Planting</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Rewards Section -->
+   <section id="rewards-section" class="container">
+        <h1>Redeem Your Rewards</h1>
+        <p class="subtitle">Exchange your hard-earned points for amazing rewards</p>
+        <p><strong>Your Points: <span id="userPoints">0</span></strong></p>
+        <div class="rewards-grid" id="rewardsGrid">
+            <!-- Rewards will be dynamically generated here -->
+        </div>
+        <div class="need-more">
+            <button id="needMoreBtn" disabled>Need More</button>
+        </div>
+    </section>
+
+
+  <!-- Leaderboard Section -->
+  <div id="leaderboard-section" class="container">
+    <h1 class="title">Community Leaderboard</h1>
+    <p class="subtitle">See how you rank among fellow eco warriors</p>
+
+    <div class="leaderboard">
+      <div class="header">
+        <h2>Leaderboard</h2>
+        <p class="desc">Top eco warriors this month</p>
+        <button class="champion-btn">🏅 Champions</button>
+      </div>
+
+      <div class="user-row first">
+        <div class="rank">#1</div>
+        <div class="circle">SP</div>
+        <div class="user-info">
+          <p class="name">Saanvi Patel</p>
+          <p class="points">2,450 points • 24 trees</p>
+        </div>
+        <span class="badge gold">Eco Champion</span>
+      </div>
+
+      <div class="user-row second">
+        <div class="rank">#2</div>
+        <div class="circle">AS</div>
+        <div class="user-info">
+          <p class="name">Arjun Singh</p>
+          <p class="points">2,180 points • 21 trees</p>
+        </div>
+        <span class="badge silver">Forest Guardian</span>
+      </div>
+
+      <div class="user-row third">
+        <div class="rank">#3</div>
+        <div class="circle">MS</div>
+        <div class="user-info">
+          <p class="name">Maya Sharma</p>
+          <p class="points">1,920 points • 19 trees</p>
+        </div>
+        <span class="badge bronze">Green Warrior</span>
+      </div>
+
+      <div class="user-row current">
+        <div class="rank">#4</div>
+        <div class="circle">Y</div>
+        <div class="user-info">
+          <p class="name">You <span class="you-tag">You</span></p>
+          <p class="points">1,250 points • 12 trees</p>
+        </div>
+        <span class="badge green">Seed Planter</span>
+      </div>
+
+      <div class="user-row">
+        <div class="rank">#5</div>
+        <div class="circle">KK</div>
+        <div class="user-info">
+          <p class="name">Kiran Kumar</p>
+          <p class="points">1,100 points • 11 trees</p>
+        </div>
+        <span class="badge gray">Nature Lover</span>
+      </div>
+
+      <div class="user-row">
+        <div class="rank">#6</div>
+        <div class="circle">PR</div>
+        <div class="user-info">
+          <p class="name">Priya Reddy</p>
+          <p class="points">980 points • 9 trees</p>
+        </div>
+        <span class="badge gray">Eco Enthusiast</span>
+      </div>
+
+      <div class="footer">
+        <p>🌱 Keep planting to climb the leaderboard!</p>
+        <small>Top 3 users each month get special rewards 🎁</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How Eco Roots Works</h2>
+    <p class="subtext">Simple steps to start earning rewards for green actions</p>
+
+    <div class="steps-container">
+      <div class="step">
+        <i class="fas fa-tree"></i>
+        <h3>1. Plant & Upload</h3>
+        <p>Plant a tree and upload proof with location to earn instant points</p>
+      </div>
+
+      <div class="step">
+        <i class="fas fa-coins"></i>
+        <h3>2. Earn Points</h3>
+        <p>Accumulate points for various eco-friendly actions and climb the leaderboard</p>
+      </div>
+
+      <div class="step">
+        <i class="fas fa-trophy"></i>
+        <h3>3. Redeem Rewards</h3>
+        <p>Exchange points for cash, vouchers, and exclusive eco-friendly products</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <h3><span class="leaf">🌿</span> Eco Roots</h3>
+      <p>Building a greener future, one tree at a time</p>
+      <p class="love">Made with ❤️ for our planet</p>
+    </footer>
+  </section>
+  <script src="project.js"></script>
+
+</body>
+</html>

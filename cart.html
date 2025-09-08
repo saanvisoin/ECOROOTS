@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; }
+    header { background:#4CAF50; padding:1rem; display:flex; justify-content:space-around; align-items:center; color:white; }
+    .cart-container { padding:2rem; }
+    .cart-item { display:flex; align-items:center; background:white; padding:1rem; margin-bottom:1rem; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+    .cart-item img { width:100px; height:100px; object-fit:cover; border-radius:8px; margin-right:1rem; }
+    .cart-info { flex:1; }
+    .cart-info h3 { margin:0; }
+    .price { font-weight:bold; margin:0.5rem 0; }
+    .quantity { display:flex; align-items:center; }
+    .quantity button { background:#4CAF50; color:white; border:none; padding:5px 10px; cursor:pointer; }
+    .quantity button:hover { background:#45a049; }
+    .delete-btn { background:red; color:white; border:none; padding:5px 10px; cursor:pointer; border-radius:5px; }
+    .total { font-size:1.5rem; font-weight:bold; margin-top:1rem; text-align:right; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Cart</h1>
+  <i class="fas fa-home cart-icon" onclick="location.href='shopping.html'"></i>
+</header>
+
+<div class="total" style="text-align: center;">Total: ₹<span id="cart-total">0</span></div>
+<div class="cart-container" id="cart-container"></div>
+
+
+<script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function updateCart() {
+    const container = document.getElementById("cart-container");
+    const totalEl = document.getElementById("cart-total");
+    container.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      let div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <img src="${item.img}" alt="${item.name}">
+        <div class="cart-info">
+          <h3>${item.name}</h3>
+          <p class="price">₹${item.price}</p>
+          <div class="quantity">
+            <button onclick="changeQuantity(${index}, -1)">-</button>
+            <span style="margin:0 10px;">${item.quantity}</span>
+            <button onclick="changeQuantity(${index}, 1)">+</button>
+          </div>
+        </div>
+        <button class="delete-btn" onclick="removeItem(${index})">Delete</button>
+      `;
+      container.appendChild(div);
+      total += item.price * item.quantity;
+    });
+
+    totalEl.textContent = total;
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  function changeQuantity(index, change) {
+    cart[index].quantity += change;
+    if (cart[index].quantity <= 0) cart.splice(index, 1);
+    updateCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  updateCart();
+</script>
+
+</body>
+</html>

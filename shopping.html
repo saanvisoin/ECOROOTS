@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Roots Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background: #4CAF50;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .cart-icon{
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    .shop-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+    .product p {
+      color: #555;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .add-to-cart {
+      background: #4CAF50;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .add-to-cart:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Eco Roots Shop</h1>
+  <p>Buy Plants & Planting Essentials</p>
+  <i class="fas fa-shopping-cart cart-icon" onclick="location.href='cart.html'"></i>
+
+</header>
+
+<section class="shop-container">
+  <div class="product">
+    <img src="https://naulokoseli.com/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-08-at-16.23.48.jpg" alt="Indoor Plant" style="height: auto;">
+    <h3>Three Stem Bamboo plant </h3>
+    <p>Perfect for your home or office</p>
+    <div class="price">₹350</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://kyari.co/cdn/shop/files/Artboard_1_0c3b9224-c2a4-4896-b33a-864d289bde73.jpg?v=1748342330&width=480" alt="Indoor Plant" style="height: auto;">
+    <h3>Money Plant</h3>
+    <p>Attracts Money</p>
+    <div class="price">₹150</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://radhakrishnaagriculture.in/cdn/shop/files/peacelily.jpg?v=1709184309" alt="peacelily" style="height: auto;">
+    <h3>Peace Lily</h3>
+    <p> brings peace</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://images.woodenstreet.de/image/cache/data/China+Lights/Plant/Arick+Decor/07-03/ARICK+D%C3%89COR+90/2-810x702.jpg" alt="Areca Palm" style="height: auto;">
+    <h3>Areca Palm</h3>
+    <p>Associated with good luck, prosperity, and positive energy</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv6HZ0GZ0WwYswEnsYKOCO9KcuVNj0kLRvzA&s" alt="Portulaca" style="height: auto;">
+    <h3>Portulaca</h3>
+    <p> Antioxidant and anti-inflammatory properties. </p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://www.juneflowers.com/wp-content/uploads/2022/08/Cactus-Plant.jpg" alt="Gardening Kit" style="height: auto;">
+    <h3>Cactus</h3>
+    <p>Offering benefits like air purification, a touch of greenery</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://wildroots.in/wp-content/uploads/2020/07/Untitled-design-48.jpg" alt="Gardening Kit" style="height: auto;">
+    <h3>Jasmin</h3>
+    <p></p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/beautiful-crassula-ovata-jade-plant-money-plant-royalty-free-image-1722349156.jpg?crop=0.670xw:1.00xh;0.194xw,0&resize=1200:*" alt="Gardening Kit" style="height: auto;">
+    <h3>Jade</h3>
+    <p>Symbolize good luck and prosperity</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+    
+  <div class="product">
+    <img src="https://www.orchid-tree.com/cdn/shop/collections/Nobile_New_Arrivals_by_Orchid-tree.jpg?v=1653040877&width=1500" alt="Gardening Kit" style="height: auto;">
+    <h3>Orchids</h3>
+    <p>Represent luxury, beauty, strength, and are considered by some cultures to bring good fortune and have mystical qualities.</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://www.jiomart.com/images/product/original/rvibirnytu/cloud-farm-real-live-dark-red-rose-live-plant-hybrid-for-balcony-terrace-outdoor-gardening-cf_2064-product-images-orvibirnytu-p603649580-0-202308050834.jpg?im=Resize=(420,420)" alt="Gardening Kit" style="height: auto;">
+    <h3>Red Rose</h3>
+    <p>Symbolizes love and passion.</p>
+    <div class="price">₹500</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/71+1P2fW8EL.jpg" alt="Bamboo Items">
+    <h3>Bamboo Diary and Pen Set</h3>
+    <p>Eco-friendly diary and pen set made from bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZD8XTTfQ1YA-w96MHsgxcyelL1vXcMsKBw&s" alt="Bamboo Items">
+    <h3>Bamboo Pen Holder</h3>
+    <p>Stylish pen holder made from sustainable bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+  
+  <div class="product">
+    <img src="https://smileboutiques.com/cdn/shop/files/il_fullxfull.4940713079_fj77_1024x1024@2x.webp?v=1688336599" alt="Bamboo Items" style="height: auto;">
+    <h3>Bamboo Hair Brush</h3>
+    <p>Eco-friendly hair brush made from sustainable bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://www.daisylife.in/cdn/shop/files/Bamboo-Toothbrush_5.jpg?v=1751360469" alt="Bamboo Items" style="width: 250px; height: auto;">
+    <h3>Bamboo Toothbrush</h3>
+    <p>Eco-friendly toothbrush made from sustainable bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://meserii.com/cdn/shop/files/Bamboo-Hair-Comb-4.webp?v=1710228902&width=1445" alt="Bamboo Items">
+    <h3>Bamboo Hair Comb</h3>
+    <p>Stylish hair comb made from sustainable bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/51I4x83d8pL.jpg" alt="Bamboo Items" style="height: auto;">
+    <h3>Plantable Pencils</h3>
+    <p>Stylish pen made from plantable recycled paper.</p>
+    <div class="price">₹200</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://giftkyade.com/cdn/shop/files/woodenpen_lifestyle4_logo_4f2a644e-0fe4-4b64-b793-766ec638257f-233179.jpg?v=1723884804" alt="Bamboo Items">
+    <h3>Bamboo Pen</h3>
+    <p>Stylish pen made from sustainable bamboo.</p>
+    <div class="price">₹300</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/41px+JbW0UL.UF1000,1000_QL80.jpg" alt="Bamboo Items" style="height: auto;">
+    <h3> Terranami Bamboo Bottle</h3>
+    <p>Stylish bottle made from sustainable bamboo.</p>
+    <div class="price">₹400</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/8/RQ/XY/UQ/27397442/product-jpeg-500x500.jpg" alt="Bamboo Items" style="height: auto;">
+    <h3>Bamboo Serving Tray</h3>
+    <p>Stylish serving tray made from sustainable bamboo.</p>
+    <div class="price">₹600</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://www.yibamboo.com/wp-content/uploads/2023/12/About-wooden.jpg" alt="Bamboo Items">
+    <h3>Bamboo Kitchenware Products</h3>
+    <p>Stylish kitchenware made from sustainable bamboo.</p>
+    <div class="price">₹1000</div>
+    <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+  </div>
+</section>
+
+<script>
+    let cart=JSON.parse(localStorage.getItem("cart")) || [];
+    function addToCart(product){
+        const name = product.querySelector("h3").textContent;
+        const price = product.querySelector(".price").textContent.replace("₹","").trim();
+        const img = product.querySelector("img").src;
+        let existing = cart.find(item => item.name === name);
+        if(existing){
+            existing.quantity += 1;
+        }
+        else{
+            cart.push({name, price, img, quantity:1});
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+    }
+    document.querySelectorAll(".product").forEach(product => {
+        product.querySelector(".add-to-cart").addEventListener("click", () => addToCart(product));
+    })
+</script>
+</body>
+</html>
